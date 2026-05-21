@@ -3,16 +3,15 @@
     padding: 0;
 }
 
+/* header */
 .hero-container {
     padding: 16px;
-    border: 2px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .hero-image-container {
-    border: 5px solid green;
     position: relative;
     width: 100%;
 }
@@ -43,16 +42,8 @@
     gap: 16px;
 }
 
-section {
-    border: 2px solid blue;
-}
-
 h1 {
     font-size: 3rem;
-}
-
-.footer-container {
-    border: 2px solid purple;
 }
 
 .office-worker {
@@ -65,8 +56,68 @@ h1 {
 .icon {
     height: 25px;
     width: 25px;
+    display: block;
 }
 
 .about-me {
+    font-size: 2rem;
     margin-bottom: 5px;
+}
+/* main section */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    row-gap: 45px;
+}
+
+.project-card {
+    border: 2px solid rgb(148, 3, 252);
+}
+
+.project-content {
+    padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.project-img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    object-position: center top;
+}
+
+.shift-left {
+    object-position: center left;
+}
+
+.shift-center {
+    object-position: center middle;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-image-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 2rem;
+}
+
+/* footer */
+.footer-container {
+    border: 4px solid rgb(255, 183, 0);
 }
