@@ -5,6 +5,8 @@
 
 /* header */
 .hero-container {
+    width: 90%;
+    max-width: 450px;
     padding: 16px;
     display: flex;
     flex-direction: column;
@@ -48,9 +50,11 @@ h1 {
 
 .office-worker {
     width: 100%;
-    height: auto;
+    max-height: 500px;
     object-fit: cover;
     display: block;
+    aspect-ratio: 2 / 3;
+    object-position: center;
 }
 
 .icon {
@@ -62,6 +66,55 @@ h1 {
 .about-me {
     font-size: 2rem;
     margin-bottom: 5px;
+}
+
+@media (min-width: 768px) {
+    .hero-container {
+        max-width: 850px;
+        display: grid;
+        grid-template-columns: 1fr 0.3fr 0.7fr;
+        grid-template-rows: repeat(3, 150px);
+        align-items: center;
+        position: relative;
+    }
+
+    .hero-image-container {
+        grid-column: 1 / 2;
+        grid-row: 1;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+    }
+
+    h1 {
+        position: static;
+        transform: none;
+        grid-column: 2 / 4;
+        grid-row: 1;
+        text-align: left;
+    }
+
+    .hero-text-container {
+        grid-column: 2 / 4;
+        grid-row: 1 / 4;
+        z-index: 2;
+        padding: 20px 40px 40px 30%;
+        align-items: flex-start;
+    }
+
+    .hero-text-wrapper {
+        text-align: left;
+    }
+    .office-worker {
+        aspect-ratio: 4 / 5;
+        max-height: none;
+        z-index: 2;
+    }
+
+    .hero-icon-container {
+        justify-content: flex-end;
+        width: 100%;
+    }
 }
 /* main section */
 
@@ -162,7 +215,7 @@ h3 {
     width: 35px;
 }
 
-.office-worker {
+footer > .office-worker {
     width: 100%;
     display: block;
     object-fit: cover;
