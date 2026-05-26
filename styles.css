@@ -75,39 +75,38 @@ h1 {
         width: 100%;
         max-width: 100%;
         overflow: auto;
-        background: yellow;
         padding: 48px;
     }
 
-    .hero-container > p {
+    .hero-subcontainer > p {
+        margin-top: 10px;
         box-sizing: border-box;
-        border: 2px solid green;
         max-width: 600px;
-        line-height: 1.6;
+        line-height: 1.4;
         font-size: 1.2rem;
     }
 
      .about-me {
         overflow: hidden;
-        text-align: left;
+        text-align: center;
+        padding-top: 75px;
     }
-    /* h1 {
-        position: static;
-        transform: none;
-        text-align: left;
-    } */
+
+    h1 {
+        position: absolute;
+        left: 40%;
+    }
 
     .office-worker {
         max-width: 45vw;
         aspect-ratio: 1 / 1;
         float: left;
-        margin-right: 2rem;
+        margin-right: 16px;
     }
 
-    /* .hero-icon-container {
+    .hero-icon-container {
         justify-content: flex-end;
-        width: 100%;
-    } */
+    }
 }
 /* main section */
 
