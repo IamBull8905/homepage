@@ -74,7 +74,6 @@ h1 {
         box-sizing: border-box;
         width: 100%;
         max-width: 100%;
-        overflow: auto;
         padding: 48px;
     }
 
@@ -110,6 +109,44 @@ h1 {
         justify-content: flex-end;
     }
 }
+
+@media (min-width: 1024px) {
+    h1 {
+        z-index: 2;
+        top: 75%;
+        left: 14%;
+    }
+
+    .hero-container {
+        position: relative;
+    }
+
+    .hero-subcontainer {
+        border: 2px solid red;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.4fr 1fr;
+    }
+
+    .about-me {
+        padding: 24px 16px;
+    }
+
+    .office-worker {
+        grid-column: 1;
+        grid-row: 1 / 3;
+        aspect-ratio: 16 / 9;
+        float: none;
+        margin-right: 0;
+        transform: scaleY(1.25);
+    }
+
+    .hero-subcontainer > p {
+        margin: 0px;
+        padding: 0px 16px;
+    }
+}
+
 /* main section */
 
 .projects-grid {
