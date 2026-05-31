@@ -47,6 +47,7 @@
     display: flex;
     justify-content: center;
     gap: 16px;
+    margin-top: 8px;
 }
 
 h1 {
@@ -150,7 +151,7 @@ h1 {
         max-width: 740px;
     }
 
-    .office-worker {
+    .hero-image-container > .office-worker {
         aspect-ratio: 16 / 9;;
         margin-right: 0;
         transform: scaleY(1.28);
@@ -171,7 +172,7 @@ h1 {
 }
 
 @media (min-width: 1300px) {
-    .office-worker {
+    .hero-image-container > .office-worker {
         transform: scaleY(1.2);
     }
 }
@@ -183,6 +184,7 @@ h1 {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     row-gap: 45px;
     padding: 15px;
+    padding-bottom: 88px;
 }
 
 .project-card {
@@ -271,7 +273,7 @@ h3 {
     flex-direction: column;
     justify-content: space-between;
     gap: 20px;
-    padding: 8px 20px 40px;
+    padding: 8px 20px 75px;
 }
 
 .hidden {
@@ -312,6 +314,8 @@ footer > .office-worker {
         justify-content: space-around;
         align-items: center;
         padding: 32px 16px 40px;
+        width: 100%;
+        max-width: 97vw;
     }
 
     .footer-text-container {
@@ -349,5 +353,30 @@ footer > .office-worker {
     .footer-icon-container {
         justify-content: flex-start;
         gap: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-container {
+        gap: 48px;
+    }
+
+    .footer-text-flex-container {
+        gap: 33px;
+        height: 100%;
+    }
+    .footer-text-container {
+        align-self: flex-start;
+        max-width: 325px;
+    }
+
+    footer > .office-worker {
+        flex: 1.2;
+        max-width: 700px;
+        max-height: 500px;
+    }
+
+    .footer-container p {
+        font-size: 1.25rem;
     }
 }
