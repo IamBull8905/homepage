@@ -111,6 +111,7 @@ h1 {
         max-width: 100%;
         padding: 48px;
         padding-left: 0px;
+        padding-bottom: 120px;
     }
 
     .hero-background {
@@ -126,6 +127,7 @@ h1 {
         position: relative;
         background-color: #ffffff;
         z-index: 2;
+        top: 50px;
         box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.18);
     }
 
@@ -146,8 +148,8 @@ h1 {
     .hero-image-container h1 {
         position: absolute;
         left: 60%;
-        top: 20%;
         text-wrap: nowrap;
+        z-index: 2;
     }
 
     .office-worker {
@@ -156,6 +158,13 @@ h1 {
         float: left;
         margin-right: 16px;
     }
+
+    .hero-image-container > .office-worker {
+        position: relative;
+        right: 5%;
+        bottom: 50px;
+    }
+
 
     .hero-icon-container {
         position: relative;
@@ -176,6 +185,17 @@ h1 {
         display: flex;
         justify-content: center;
         padding-left: 48px;
+        padding-bottom: 56px;
+    }
+    .hero-image-container > .office-worker {
+        position: relative;
+        right: 0%;
+        bottom: 0px;
+        top: 35px;
+    }
+
+    .hero-image-container > h1 {
+        top: 85%;
     }
 
     .hero-subcontainer {
@@ -184,10 +204,11 @@ h1 {
         max-width: 1500px;
         max-height: 400px;
         padding: 0px;
+        top: 0px;
         display: grid;
         position: relative;
         grid-template-columns: minmax(0, 740px) minmax(0, 750px);
-        grid-template-rows: 0.4fr 1fr;
+        grid-template-rows: 0.5fr 1fr;
         box-shadow: 0 4px 15px -2px rgba(0, 0, 0, 0.2);;
     }
 
@@ -237,6 +258,7 @@ h1 {
 @media (min-width: 1300px) {
     .hero-image-container > .office-worker {
         transform: scaleY(1.12);
+        position: static;
     }
 }
 
@@ -460,6 +482,7 @@ footer > .office-worker {
         flex: 1.2;
         max-width: 700px;
         max-height: 500px;
+        margin-right: 32px;
     }
 
     .footer-container p {
